@@ -1,0 +1,57 @@
+Un control de versiones es un sistema que registra los cambios realizados en un archivo o conjunto de archivos a lo largo del tiempo, de modo que puedas recuperar versiones específicas más adelante.
+
+Git maneja sus datos como un conjunto de copias instantáneas de un sistema de archivos miniatura.
+
+Git maneja sus datos como una secuencia de copias instantáneas.
+
+La mayoría de las operaciones en Git sólo necesitan archivos y recursos locales para funcionar. Por lo general no se necesita información de ningún otro computador de tu red. 
+ Debido a que tienes toda la historia del proyecto ahí mismo, en tu disco local, la mayoría de las operaciones parecen prácticamente inmediatas.
+
+24b9da6552252987aa493b52f8696cd6d3b00373
+Verás estos valores hash por todos lados en Git, porque son usados con mucha frecuencia. De hecho, Git guarda todo no por nombre de archivo, sino por el valor hash de sus contenidos.
+
+ Git tiene tres estados principales en los que se pueden encontrar tus archivos: confirmado (committed), modificado (modified), y preparado (staged).
+
+Confirmado: significa que los datos están almacenados de manera segura en tu base de datos local.
+
+Modificado: significa que has modificado el archivo pero todavía no lo has confirmado a tu base de datos.
+
+Preparado: significa que has marcado un archivo modificado en su versión actual para que vaya en tu próxima  confirmación.
+
+
+print(areas.png)
+
+El directorio de Git es donde se almacenan los metadatos y la base de datos de objetos para tu proyecto. Es la parte más importante de Git, y es lo que se copia cuando clonas un repositorio desde otra computadora.
+
+El directorio de trabajo es una copia de una versión del proyecto. Estos archivos se sacan de la base de datos comprimida en el directorio de Git, y se colocan en disco para que los puedas usar o modificar.
+
+El área de preparación es un archivo, generalmente contenido en tu directorio de Git, que almacena información acerca de lo que va a ir en tu próxima confirmación. A veces se le denomina índice (“index”), pero se está convirtiendo en estándar el referirse a ella como el área de preparación.
+
+$ git clone https://github.com/libgit2/libgit2 mylibgit
+Ese comando hace lo mismo que git clone, pero el directorio de destino se llamará mylibgit.
+
+Recuerda que cada archivo de tu repositorio puede tener dos estados: rastreados y sin rastrear. Los archivos rastreados (tracked files en inglés) son todos aquellos archivos que estaban en la última instantánea del proyecto
+
+ cualquier otro archivo en tu directorio de trabajo que no estaba en tu última instantánea y que no está en el área de preparación (staging area)
+
+Mientras editas archivos, Git los ve como modificados, pues han sido cambiados desde su último commit. Luego preparas estos archivos modificados y finalmente confirmas todos los cambios preparados, y repites el ciclo.
+
+print(lifecycle.png)
+
+
+Si bien es cierto que la salida de git status es bastante explícita, también es verdad que es muy extensa. Git ofrece una opción para obtener un estado abreviado, de manera que puedas ver tus cambios de una forma más compacta.
+ Si ejecutas git status -s o git status --short, obtendrás una salida mucho más simplificada.
+Los archivos nuevos que no están rastreados tienen un ?? a su lado, los archivos que están preparados tienen una A y los modificados una M.
+
+git diff te muestra las líneas exactas que fueron añadidas y eliminadas
+
+Saltar el Área de Preparación
+A pesar de que puede resultar muy útil para ajustar los commits tal como quieres, el área de preparación es a veces un paso más complejo de lo que necesitas para tu flujo de trabajo. Si quieres saltarte el área de preparación, Git te ofrece un atajo sencillo. Añadiendo la opción -a al comando git commit harás que Git prepare automáticamente todos los archivos rastreados antes de confirmarlos, ahorrándote el paso de git add:
+
+
+
+
+
+
+
+

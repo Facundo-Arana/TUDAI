@@ -1,0 +1,43 @@
+
+
+.conteiner {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 2fr;
+    grid-template-areas: "head head" "menu main";
+}
+
+h1 {
+    text-align: center;
+    grid-area: "head";
+    grid-column: 1/3;
+}
+
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+form {
+    grid-area: menu;
+}
+
+.tabla {
+    grid-area: main;
+    background-color: black;
+    color: white;
+    border: 1px solid gray;
+}
+
+tr {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+td {
+    padding: 5px;
+    border: 1px solid grey;
+    color: white;
+}

@@ -1,0 +1,71 @@
+*{
+    text-transform: capitalize;
+}
+.conteiner {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 0.5fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-template-rows: 0.5fr 2fr 2fr 2fr;
+    grid-template-areas: "head head head" "form1 table1 table2" "form2 table1 table2" "gap table1 table2";
+}
+
+h1 {
+    text-align: center;
+    grid-area: "head";
+    grid-column: 1/4;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.carrera {
+    grid-area: form1;
+}
+
+.materia {
+    grid-area: form2;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border: 1px solid gray;
+}
+
+.tabla1 {
+    grid-area: table1;
+    grid-row: 2/5;
+}
+
+.tabla2 {
+    grid-area: table2;
+    grid-row: 2/5;
+}
+
+tr {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+td {
+    padding: 5px;
+    border: 1px solid grey;
+    color: white;
+}
+
+label{
+    visibility: hidden;
+}
+.visible{
+    visibility: visible;
+}
