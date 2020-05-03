@@ -1,0 +1,476 @@
+////////////////////////////////////////////////////////
+iniciando aprendizaje de la herramienta GIT.
+
+Un control de versiones es un sistema que registra los cambios realizados en un archivo o conjunto de archivos a lo largo del tiempo, de modo que puedas recuperar versiones específicas más adelante.
+
+Git maneja sus datos como un conjunto de copias instantáneas de un sistema de archivos miniatura.
+
+Git maneja sus datos como una secuencia de copias instantáneas.
+
+La mayoría de las operaciones en Git sólo necesitan archivos y recursos locales para funcionar. Por lo general no se necesita información de ningún otro computador de tu red. 
+ Debido a que tienes toda la historia del proyecto ahí mismo, en tu disco local, la mayoría de las operaciones parecen prácticamente inmediatas.
+
+24b9da6552252987aa493b52f8696cd6d3b00373
+Verás estos valores hash por todos lados en Git, porque son usados con mucha frecuencia. De hecho, Git guarda todo no por nombre de archivo, sino por el valor hash de sus contenidos.
+
+ Git tiene tres estados principales en los que se pueden encontrar tus archivos: confirmado (committed), modificado (modified), y preparado (staged).
+
+Confirmado: significa que los datos están almacenados de manera segura en tu base de datos local.
+
+Modificado: significa que has modificado el archivo pero todavía no lo has confirmado a tu base de datos.
+
+Preparado: significa que has marcado un archivo modificado en su versión actual para que vaya en tu próxima  confirmación.
+
+
+print(areas.png)
+
+El directorio de Git es donde se almacenan los metadatos y la base de datos de objetos para tu proyecto. Es la parte más importante de Git, y es lo que se copia cuando clonas un repositorio desde otra computadora.
+
+El directorio de trabajo es una copia de una versión del proyecto. Estos archivos se sacan de la base de datos comprimida en el directorio de Git, y se colocan en disco para que los puedas usar o modificar.
+
+El área de preparación es un archivo, generalmente contenido en tu directorio de Git, que almacena información acerca de lo que va a ir en tu próxima confirmación. A veces se le denomina índice (“index”), pero se está convirtiendo en estándar el referirse a ella como el área de preparación.
+
+$ git clone https://github.com/libgit2/libgit2 mylibgit
+Ese comando hace lo mismo que git clone, pero el directorio de destino se llamará mylibgit.
+
+
+///////////////////////////////////////////////////////////////
+2.2 Fundamentos de Git - Guardando cambios en el Repositorio
+
+
+Recuerda que cada archivo de tu repositorio puede tener dos estados: rastreados y sin rastrear. Los archivos rastreados (tracked files en inglés) son todos aquellos archivos que estaban en la última instantánea del proyecto
+
+ cualquier otro archivo en tu directorio de trabajo que no estaba en tu última instantánea y que no está en el área de preparación (staging area)
+
+Mientras editas archivos, Git los ve como modificados, pues han sido cambiados desde su último commit. Luego preparas estos archivos modificados y finalmente confirmas todos los cambios preparados, y repites el ciclo.
+
+print(lifecycle.png)
+
+Si bien es cierto que la salida de git status es bastante explícita, también es verdad que es muy extensa. Git ofrece una opción para obtener un estado abreviado, de manera que puedas ver tus cambios de una forma más compacta.
+
+
+ Si ejecutas git status -s o git status --short, obtendrás una salida mucho más simplificada.
+Los archivos nuevos que no están rastreados tienen un ?? a su lado, los archivos que están preparados tienen una A y los modificados una M.
+
+git diff te muestra las líneas exactas que fueron añadidas y eliminadas
+
+
+Saltar el Área de Preparación
+
+A pesar de que puede resultar muy útil para ajustar los commits tal como quieres, el área de preparación es a veces un paso más complejo de lo que necesitas para tu flujo de trabajo. Si quieres saltarte el área de preparación, Git te ofrece un atajo sencillo. Añadiendo la opción -a al comando git commit harás que Git prepare automáticamente todos los archivos rastreados antes de confirmarlos, ahorrándote el paso de git add:
+
+Eliminar Archivos
+
+Para eliminar archivos de Git, debes eliminarlos de tus archivos rastreados (o mejor dicho, eliminarlos del área de preparación) y luego confirmar. Para ello existe el comando git rm, que además elimina el archivo de tu directorio de trabajo de manera que no aparezca la próxima vez como un archivo no rastreado.
+
+Si simplemente eliminas el archivo de tu directorio de trabajo, aparecerá en la sección “Changes not staged for commit” (esto es, sin preparar) en la salida de git status:
+
+
+///////////////////////////////////////////////////////////////
+2.3 Fundamentos de Git - Ver el Historial de Confirmaciones
+
+
+El comando git log proporciona gran cantidad de opciones para mostrarte exactamente lo que buscas. Aquí veremos algunas de las más usadas.
+
+Una de las opciones más útiles es -p, que muestra las diferencias introducidas en cada confirmación. También puedes usar la opción -2, que hace que se muestren únicamente las dos últimas entradas del historial:
+
+si quieres ver algunas estadísticas de cada confirmación, puedes usar la opción --stat: 
+ imprime tras cada confirmación una lista de archivos modificados, indicando cuántos han sido modificados y cuántas líneas han sido añadidas y eliminadas para cada uno de ellos, y un resumen de toda esta información.
+
+Como puedes ver, la opción --stat imprime tras cada confirmación una lista de archivos modificados, indicando cuántos han sido modificados y cuántas líneas han sido añadidas y eliminadas para cada uno de ellos, y un resumen de toda esta información.
+
+Otra opción realmente útil es --pretty, que modifica el formato de la salida. Tienes unos cuantos estilos disponibles. La opción oneline imprime cada confirmación en una única línea, lo que puede resultar útil si estás analizando gran cantidad de confirmaciones. Otras opciones son short, full y fuller, que muestran la salida en un formato parecido, pero añadiendo menos o más información, respectivamente:
+
+
+Limitar la Salida del Historial
+
+ puedes hacer git log -<n>, siendo n cualquier entero, para mostrar las últimas n confirmaciones.
+
+Sin embargo, las opciones temporales como --since (desde) y --until (hasta) sí que resultan muy útiles. Por ejemplo, este comando lista todas las confirmaciones hechas durante las dos últimas semanas:
+
+$ git log --since=2.weeks
+Este comando acepta muchos formatos. Puedes indicar una fecha concreta ("2008-01-15"), o relativa, como "2 years 1 day 3 minutes ago" ("hace 2 años, 1 día y 3 minutos").
+
+ La opción --author te permite filtrar por autor, y --grep te permite buscar palabras clave entre los mensajes de confirmación. (Ten en cuenta que si quieres aplicar ambas opciones simultáneamente, tienes que añadir --all-match, o el comando mostrará las confirmaciones que cumplan cualquiera de las dos, no necesariamente las dos a la vez.)
+
+Otra opción útil es -S, la cual recibe una cadena y solo muestra las confirmaciones que cambiaron el código añadiendo o eliminando la cadena. Por ejemplo, si quieres encontrar la última confirmación que añadió o eliminó una referencia a una función específica, puede ejecutar:
+
+$ git log -Sfunction_name
+
+
+///////////////////////////////////////////gitlog.png
+
+2.4 Fundamentos de Git - Deshacer Cosas
+Deshacer Cosas
+
+
+Uno de las acciones más comunes a deshacer es cuando confirmas un cambio antes de tiempo y olvidas agregar algún archivo, o te equivocas en el mensaje de confirmación. Si quieres rehacer la confirmación, puedes reconfirmar con la opción --amend:
+
+$ git commit --amend
+Este comando utiliza tu área de preparación para la confirmación. Si no has hecho cambios desde tu última confirmación (por ejemplo, ejecutas este comando justo después de tu confirmación anterior), entonces la instantánea lucirá exactamente igual y lo único que cambiarás será el mensaje de confirmación.
+
+$ git commit -m 'initial commit'
+$ git add forgotten_file
+$ git commit --amend -m "".
+
+Al final terminarás con una sola confirmación - la segunda confirmación reemplaza el resultado de la primera.
+
+
+
+supongamos que has cambiado dos archivos y que quieres confirmarlos como dos cambios separados, pero accidentalmente has escrito git add * y has preparado ambos. ¿Cómo puedes sacar del área de preparación uno de ellos? 
+
+Justo debajo del texto “Changes to be committed” (“Cambios a ser confirmados”, en inglés), verás que dice que uses git reset HEAD <file>... para deshacer la preparación. Por lo tanto, usemos el consejo para deshacer la preparación del archivo CONTRIBUTING.md:
+
+
+A pesar de que git reset puede ser un comando peligroso si lo llamas con --hard, en este caso el archivo que está en tu directorio de trabajo no se toca. Ejecutar git reset sin opciones no es peligroso - solo toca el área de preparación.
+
+
+Deshacer un Archivo Modificado
+
+¿Qué tal si te das cuenta que no quieres mantener los cambios del archivo CONTRIBUTING.md? ¿Cómo puedes restaurarlo fácilmente - volver al estado en el que estaba en la última confirmación (o cuando estaba recién clonado, o como sea que haya llegado a tu directorio de trabajo)?
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+    modified:   CONTRIBUTING.md
+
+Allí se te indica explícitamente como descartar los cambios que has hecho. Hagamos lo que nos dice:
+
+$ git checkout -- CONTRIBUTING.md
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    renamed:    README.md -> README
+
+Ahora puedes ver que los cambios se han revertido.
+
+
+Es importante entender que git checkout -- [archivo] es un comando peligroso. Cualquier cambio que le hayas hecho a ese archivo desaparecerá - acabas de sobreescribirlo con otro archivo. Nunca utilices este comando a menos que estés absolutamente seguro de que ya no quieres el archivo.
+
+Para mantener los cambios que has hecho y a la vez deshacerte del archivo temporalmente, hablaremos sobre cómo esconder archivos (stashing, en inglés) y sobre ramas en Ramificaciones en Git; normalmente, estas son las mejores maneras de hacerlo.
+
+Recuerda, todo lo que esté confirmado en Git puede recuperarse. Incluso commits que estuvieron en ramas que han sido eliminadas o commits que fueron sobreescritos con --amend pueden recuperarse.
+
+
+///////////////////////////////////////////////////
+
+2.5 Fundamentos de Git - Trabajar con Remotos
+
+Ver Tus Remotos
+Para ver los remotos que tienes configurados, debes ejecutar el comando git remote. Mostrará los nombres de cada uno de los remotos que tienes especificados.
+
+ la opción -v, la cual muestra las URLs que Git ha asociado al nombre y que serán usadas al leer y escribir en ese remoto:
+
+$ git remote -v
+origin	https://github.com/schacon/ticgit (fetch)
+origin	https://github.com/schacon/ticgit (push)
+
+
+Añadir Repositorios Remotos
+
+Para añadir un remoto nuevo y asociarlo a un nombre que puedas referenciar fácilmente, ejecuta git remote add [nombre] [url]:
+
+$ git remote
+origin
+
+$ git remote add pb https://github.com/paulboone/ticgit
+$ git remote -v
+origin	https://github.com/schacon/ticgit (fetch)
+origin	https://github.com/schacon/ticgit (push)
+pb	https://github.com/paulboone/ticgit (fetch)
+pb	https://github.com/paulboone/ticgit (push)
+
+Traer y Combinar Remotos
+Como hemos visto hasta ahora, para obtener datos de tus proyectos remotos puedes ejecutar:
+
+$ git fetch [remote-name]
+Es importante destacar que el comando git fetch solo trae datos a tu repositorio local - ni lo combina automáticamente con tu trabajo ni modifica el trabajo que llevas hecho. La combinación con tu trabajo debes hacerla manualmente cuando estés listo.
+
+
+Generalmente, al ejecutar git pull traerás datos del servidor del que clonaste originalmente y se intentará combinar automáticamente la información con el código en el que estás trabajando.
+
+
+Enviar a Tus Remotos
+
+Cuando tienes un proyecto que quieres compartir, debes enviarlo a un servidor. El comando para hacerlo es simple: git push [nombre-remoto] [nombre-rama]. Si quieres enviar tu rama master a tu servidor origin (recuerda, clonar un repositorio establece esos nombres automáticamente), entonces puedes ejecutar el siguiente comando y se enviarán todos los commits que hayas hecho al servidor:
+
+$ git push origin master
+
+Este comando solo funciona si clonaste de un servidor sobre el que tienes permisos de escritura y si nadie más ha enviado datos por el medio. Si alguien más clona el mismo repositorio que tú y envía información antes que tú, tu envío será rechazado. Tendrás que traerte su trabajo y combinarlo con el tuyo antes de que puedas enviar datos al servidor.
+
+Inspeccionar un Remoto
+
+Si quieres ver más información acerca de un remoto en particular, puedes ejecutar el comando git remote show [nombre-remoto]. Si ejecutas el comando con un nombre en particular, como origin, verás algo como lo siguiente:
+
+$ git remote show origin
+* remote origin
+  Fetch URL: https://github.com/schacon/ticgit
+  Push  URL: https://github.com/schacon/ticgit
+  HEAD branch: master
+  Remote branches:
+    master                               tracked
+    dev-branch                           tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+
+
+El comando lista la URL del repositorio remoto y la información del rastreo de ramas. El comando te indica claramente que si estás en la rama maestra y ejecutas el comando git pull, automáticamente combinará la rama maestra remota con tu rama local, luego de haber traído toda la información de ella. También lista todas las referencias remotas de las que ha traído datos.
+
+Eliminar y Renombrar Remotos
+
+Si quieres cambiar el nombre de la referencia de un remoto puedes ejecutar git remote rename. 
+
+Si por alguna razón quieres eliminar un remoto - has cambiado de servidor o no quieres seguir utilizando un mirror o quizás un colaborador ha dejado de trabajar en el proyecto - puedes usar git remote rm:
+
+
+
+/////////////////////////////////////////////////
+2.6 Fundamentos de Git - Etiquetado
+
+Git tiene la posibilidad de etiquetar puntos específicos del historial como importantes. Esta funcionalidad se usa típicamente para marcar versiones de lanzamiento (v1.0, por ejemplo).
+
+Listar Tus Etiquetas
+
+Listar las etiquetas disponibles en Git es sencillo. Simplemente escribe git tag:
+
+$ git tag
+v0.1
+v1.3
+Este comando lista las etiquetas en orden alfabético; el orden en el que aparecen no tiene mayor importancia.
+
+
+También puedes buscar etiquetas con un patrón particular. El repositorio del código fuente de Git, por ejemplo, contiene más de 500 etiquetas. Si sólo te interesa ver la serie 1.8.5, puedes ejecutar:
+
+$ git tag -l 'v1.8.5*'
+v1.8.5
+v1.8.5-rc0
+v1.8.5-rc1
+v1.8.5-rc2
+v1.8.5-rc3
+v1.8.5.1
+v1.8.5.2
+v1.8.5.3
+v1.8.5.4
+v1.8.5.5
+
+Crear Etiquetas
+
+Git utiliza dos tipos principales de etiquetas: ligeras y anotadas.
+
+Una etiqueta ligera es muy parecido a una rama que no cambia - simplemente es un puntero a un commit específico.
+
+
+Etiquetas Anotadas
+
+Crear una etiqueta anotada en Git es sencillo. La forma más fácil de hacerlo es especificar la opción -a cuando ejecutas el comando git tag:
+
+$ git tag -a v1.4 -m 'my version 1.4'
+$ git tag
+v0.1
+v1.3
+v1.4
+
+La opción -m especifica el mensaje de la etiqueta, el cual es guardado junto con ella. Si no especificas el mensaje de una etiqueta anotada, Git abrirá el editor de texto para que lo escribas.
+
+Puedes ver la información de la etiqueta junto con el commit que está etiquetado al usar el comando git show:
+
+$ git show v1.4
+
+
+Etiquetado Tardío
+
+También puedes etiquetar commits mucho tiempo después de haberlos hecho. Supongamos que tu historial luce como el siguiente:
+
+$ git log --pretty=oneline
+15027957951b64cf874c3557a0f3547bd83b3ff6 Merge branch 'experiment'
+a6b4c97498bd301d84096da251c98a07c7723e65 beginning write support
+0d52aaab4479697da7686c15f77a3d64d9165190 one more thing
+6d52a271eda8725415634dd79daabbc4d9b6008e Merge branch 'experiment'
+0b7434d86859cc7b8c3d5e1dddfed66ff742fcbc added a commit function
+4682c3261057305bdd616e23b64b0857d832627b added a todo file
+166ae0c4d3f420721acbb115cc33848dfcc2121a started write support
+9fceb02d0ae598e95dc970b74767f19372d61af8 updated rakefile
+964f16d36dfccde844893cac5b347e7b3d44abbc commit the todo
+8a5cbc430f1a9c3d00faaeffd07798508422908a updated readme
+
+
+Ahora, supongamos que olvidaste etiquetar el proyecto en su versión v1.2, la cual corresponde al commit “updated rakefile”. Igual puedes etiquetarlo. Para etiquetar un commit, debes especificar el checksum del commit (o parte de él) al final del comando:
+
+$ git tag -a v1.2 9fceb02
+
+Compartir Etiquetas
+
+Por defecto, el comando git push no transfiere las etiquetas a los servidores remotos. Debes enviar las etiquetas de forma explícita al servidor luego de que las hayas creado. 
+
+puedes ejecutar git push origin [etiqueta].
+
+Si quieres enviar varias etiquetas a la vez, puedes usar la opción --tags del comando git push. Esto enviará al servidor remoto todas las etiquetas que aun no existen en él.
+
+$ git push origin --tags.
+
+Sacar una Etiqueta
+
+En Git, no puedes sacar (check out) una etiqueta, pues no es algo que puedas mover. Si quieres colocar en tu directorio de trabajo una versión de tu repositorio que coincida con alguna etiqueta, debes crear una rama nueva en esa etiqueta:
+
+$ git checkout -b version2 v2.0.0
+Switched to a new branch 'version2'
+
+
+
+/////////////////////////////////////////////////
+2.7 Fundamentos de Git - Alias de Git
+
+ Si no quieres teclear el nombre completo de cada comando de Git, puedes establecer fácilmente un alias para cada comando mediante git config. Aquí tienes algunos ejemplos que te pueden interesar:
+
+$ git config --global alias.co checkout
+$ git config --global alias.br branch
+$ git config --global alias.ci commit
+$ git config --global alias.st status
+Esto significa que, por ejemplo, en lugar de teclear git commit, solo necesitas teclear git ci.
+
+
+$ git config --global alias.unstage 'reset HEAD --'
+Esto hace que los dos comandos siguientes sean equivalentes:
+
+$ git unstage fileA
+$ git reset HEAD fileA
+Esto parece un poco más claro. También es frecuente añadir un comando last, de este modo:
+
+$ git config --global alias.last 'log -1 HEAD'
+De esta manera, puedes ver fácilmente cuál fue la última confirmación:
+
+$ git last
+commit 66938dae3329c7aebe598c2246a8e6af90d04646
+Author: Josh Goebel <dreamer3@example.com>
+Date:   Tue Aug 26 19:48:51 2008 +0800
+
+    test for current head
+
+    Signed-off-by: Scott Chacon <schacon@example.com>
+
+
+///////////////////////////////////////
+3.1 Ramificaciones en Git - ¿Qué es una rama?
+
+ A diferencia de otros sistemas de control de versiones, Git promueve un ciclo de desarrollo donde las ramas se crean y se unen ramas entre sí, incluso varias veces en el mismo día. Entender y manejar esta opción te proporciona una poderosa y exclusiva herramienta que puede, literalmente, cambiar la forma en la que desarrollas.
+
+
+¿Qué es una rama?
+
+ Git no los almacena de forma incremental (guardando solo diferencias), sino que los almacena como una serie de instantáneas (copias puntuales de los archivos completos, tal y como se encuentran en ese momento).
+
+En cada confirmación de cambios (commit), Git almacena una instantánea de tu trabajo preparado. Dicha instantánea contiene además unos metadatos con el autor y el mensaje explicativo, y uno o varios apuntadores a las confirmaciones (commit) que sean padres directos de esta (un padre en los casos de confirmación normal, y múltiples padres en los casos de estar confirmando una fusión (merge) de dos o más ramas).
+
+{
+ vamos a suponer, por ejemplo, que tienes una carpeta con tres archivos, que preparas (stage) todos ellos y los confirmas (commit). Al preparar los archivos, Git realiza una suma de control de cada uno de ellos, almacena una copia de cada uno en el repositorio (estas copias se denominan "blobs"), y guarda cada suma de control en el área de preparación (staging area):
+
+$ git add README test.rb LICENSE
+$ git commit -m 'initial commit of my project'
+
+En este momento, el repositorio de Git contendrá cinco objetos: un "blob" para cada uno de los tres archivos, un árbol con la lista de contenidos del directorio (más sus respectivas relaciones con los "blobs"), y una confirmación de cambios (commit) apuntando a la raíz de ese árbol y conteniendo el resto de metadatos pertinentes.
+
+commit-and-tree.png
+
+Si haces más cambios y vuelves a confirmar, la siguiente confirmación guardará un apuntador a su confirmación precedente.
+
+}
+
+Una rama Git es simplemente un apuntador móvil apuntando a una de esas confirmaciones. La rama por defecto de Git es la rama master. Con la primera confirmación de cambios que realicemos, se creará esta rama principal master apuntando a dicha confirmación. En cada confirmación de cambios que realicemos, la rama irá avanzando automáticamente.
+
+La rama master en Git, no es una rama especial. Es como cualquier otra rama. La única razón por la cual aparece en casi todos los repositorios es porque es la que crea por defecto el comando git init y la gente no se molesta en cambiarle el nombre.
+
+ branch and history.png
+
+Crear una Rama Nueva
+
+¿Que sucede cuando creas una nueva rama? Simplemente se crea un nuevo apuntador para que lo puedas mover libremente.
+
+
+Para ello, usarás el comando git branch:
+
+git-branch-testing.png
+
+Esto creará un nuevo apuntador apuntando a la misma confirmación donde estés actualmente.
+
+two-branches.png
+
+
+Y, ¿cómo sabe Git en qué rama estás en este momento? Pues, mediante un apuntador especial denominado HEAD.
+
+el comando git branch solamente crea una nueva rama, pero no salta a dicha rama.
+
+head-to-master.png
+
+Esto puedes verlo fácilmente al ejecutar el comando git log para que te muestre a dónde apunta cada rama. Esta opción se llama --decorate.
+
+
+Cambiar de Rama
+
+Para saltar de una rama a otra, tienes que utilizar el comando git checkout.
+
+$ git checkout testing
+
+head-to-testing.png
+
+
+¿Cual es el significado de todo esto tras realizar otra confirmación de cambios?
+
+$ vim test.rb
+$ git commit -a -m 'made a change'
+
+advanced-testing.png
+
+la rama testing avanza, mientras que la rama master permanece en la confirmación donde estaba cuando lanzaste el comando git checkout para saltar.
+
+$ git checkout master
+
+checkout-master.png
+
+Este comando realiza dos acciones:
+
+ Mueve el apuntador HEAD de nuevo a la rama master, y revierte los archivos de tu directorio de trabajo, dejándolos tal y como estaban en la última instantánea confirmada en dicha rama master.
+ Esto supone que los cambios que hagas desde este momento en adelante, divergirán de la antigua versión del proyecto. Básicamente, lo que se está haciendo es rebobinar el trabajo que habías hecho temporalmente en la rama testing; de tal forma que puedas avanzar en otra dirección diferente.
+
+Es importante destacar que cuando saltas a una rama en Git, los archivos de tu directorio de trabajo cambian. Si saltas a una rama antigua, tu directorio de trabajo retrocederá para verse como lo hacía la última vez que confirmaste un cambio en dicha rama. Si Git no puede hacer el cambio limpiamente, no te dejará saltar.
+
+
+ Si ejecutas git log --oneline --decorate --graph --all te mostrará el historial de tus confirmaciones, indicando dónde están los apuntadores de tus ramas y como ha divergido tu historial.
+
+$ git log --oneline --decorate --graph --all
+* c2b9e (HEAD, master) made other changes
+| * 87ab2 (testing) made a change
+|/
+* f30ab add feature #32 - ability to add new formats to the
+* 34ac2 fixed bug #1328 - stack overflow under certain conditions
+* 98ca9 initial commit of my project
+
+
+/////////////////////////////////////////////////////////////////////////////
+3.2 Ramificaciones en Git - Procedimientos Básicos para Ramificar y Fusionar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
