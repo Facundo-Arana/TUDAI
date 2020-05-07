@@ -1,0 +1,1 @@
+where genre.name = $genre
