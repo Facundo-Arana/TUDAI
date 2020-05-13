@@ -1,0 +1,489 @@
+prefacio()
+{{{{{
+
+EL TEXTO BÁSICO
+
+El texto básico presenta una descripción general de los conceptos fundamentales de MIS
+mediante un marco de trabajo integrado para describir y analizar los sistemas de información. Este marco de trabajo muestra sistemas de información compuestos de personas, organización y tecnología, y se refuerza en los proyectos para los estudiantes y los
+casos de estudio.
+
+Organización de los capítulos
+
+Cada capítulo contiene los siguientes elementos:
+
+• Un proyecto de capítulo basado en los objetivos de aprendizaje
+• Lista de todos los casos de estudio y casos de video para cada capítulo
+• Un caso de inicio que describe a una organización real para establecer el tema y la
+importancia del capítulo
+• Un diagrama que analiza el caso de inicio en términos del modelo de administración,
+organización y tecnología que se utiliza en todo el texto
+• Dos sesiones interactivas con preguntas sobre el caso de estudio
+• Un resumen adaptado a los objetivos de aprendizaje del estudiante
+• Una lista de términos clave que los estudiantes pueden usar para repasar conceptos
+• Preguntas de repaso para que los estudiantes evalúen su comprensión del material
+del capítulo
+• Preguntas para debate relacionadas con los temas más amplios del capítulo
+
+{$capitulo1_imagen1.png}
+
+•Una serie de Proyectos prácticos sobre MIS, que consiste en dos problemas de decisión gerencial, un proyecto práctico de software de aplicación y un proyecto para desarrollar habilidades en Internet
+• Un caso de estudio al final del capítulo, para que los estudiantes apliquen los conceptos vistos
+• Preguntas de escritura con calificación asistida y rúbricas de calificación prediseñadas
+• Referencias del capítulo
+
+
+CARACTERÍSTICAS CLAVE
+
+Orientado a los negocios, con casosy ejemplos reales
+
+Este texto ayuda a los estudiantes a ver la conexión directa entre los sistemas de información y el desempeño de la empresa. Describe los principales objetivos comerciales
+que controlan el uso de los sistemas y las tecnologías de información en empresas de
+todo el mundo: excelencia operacional, nuevos productos y servicios, intimidad entre
+cliente y proveedor, toma de decisiones mejorada, ventaja competitiva y supervivencia.
+Los ejemplos dentro del texto y los casos de estudio muestran a los estudiantes la forma
+como una empresa específica utiliza los sistemas de información para alcanzar estos
+objetivos.
+
+Interactividad
+
+Sesiones interactivas: En cada capítulo se rediseñaron dos casos cortos como sesiones 
+interactivas para usarlos en el salón de clases (o en tableros de debate en
+Internet) para estimular el interés y activar el aprendizaje de los estudiantes. Cada
+caso concluye con preguntas del caso de estudio, las cuales ofrecen temas para
+debates en clase, en Internet o tareas por escrito. 
+
+{$capitulo1_imagen2.png}
+
+
+Enfoque en el aprendizaje de los estudiantes
+
+Los objetivos de aprendizaje están organizados en torno a un conjunto de preguntas de
+estudio para enfocarse en la atención de los estudiantes. Cada capítulo concluye con un
+resumen y preguntas de repaso organizadas en torno a esas preguntas de estudio, y la
+sección principal de cada capítulo se basa en un objetivo de aprendizaje.
+
+
+La parte uno presenta los temas principales de este libro y genera una serie de preguntas importantes:
+
+¿qué es un sistema de información y cuáles son sus dimensiones en la administración, organización y tecnología? 
+
+¿Por qué actualmente son tan esenciales los sistemas de información en los  negocios?
+
+¿Por qué son tan importantes los sistemas para la colaboración y el trabajo en equipo? 
+
+¿Cómo pueden ayudar los sistemas de información a que los negocios sean  más competitivos?
+
+¿Qué aspectos éticos y sociales más amplios surgen del uso generalizado de los sistemas de información?
+
+}}}}}}}}}
+
+CAPITULO 1
+Los sistemas de informaciónen los negocios globales contemporáneos
+
+OBJETIVOS DE APRENDIZAJE
+
+Después de leer este capítulo, usted podrá responder las siguientes preguntas:
+
+1. ¿Cómo transforman los sistemas de información a los negocios y por qué son tan
+esenciales para operar y administrar un negocio en la actualidad?
+
+2. ¿Qué es un sistema de información? ¿Cómo funciona? ¿Cuáles son sus componentes
+de administración, organización y tecnología, y por qué los activos complementarios
+son esenciales para asegurar que los sistemas de información proporcionen un valor
+genuino para las organizaciones?
+
+3. ¿Qué disciplinas académicas se utilizan para estudiar los sistemas de información y
+cómo contribuye cada una a la comprensión de los sistemas de información?
+
+
+capitulo1.1:
+{{{{
+
+LOS GIGANTES DE SAN FRANCISCO GANAN EN GRANDE CON LA TECNOLOGÍA DE LA INFORMACIÓN
+
+Los Gigantes de San Francisco son uno de los equipos de béisbol más antiguos
+de Estados Unidos, y también uno de los más exitosos. Han ganado más juegos que cualquier otro equipo en la historia del béisbol estadounidense, y que cualquier otro equipo deportivo profesional estadounidense. 
+
+Parte de su éxito, como equipo y empresa, puede atribuirse al uso que hace de la tecnología de la información.
+El béisbol es un juego en el que se aplican mucho las estadísticas, por lo que todos
+los principales equipos analizan de manera constante sus datos sobre el rendimiento
+de los jugadores y el posicionamiento óptimo en el campo. 
+
+ Los Gigantes  comenzaron a aplicar un sistema de video de Sportsvision
+llamado FIELDf/x, el cual registra digitalmente en tiempo real la posición de todos
+los jugadores y las pelotas bateadas. El sistema genera estadísticas defensivas como la
+dificultad de una atrapada y la probabilidad de que un jardinero específico realice esa
+atrapada. La información que produce el sistema sobre la velocidad de los jugadores y
+el tiempo de respuesta, como la rapidez con que un jardinero llega a una pelota o reacciona a las líneas, permitirá a los Gigantes realizar el análisis de datos de los jugadores con mucha mayor precisión.
+
+Por lo general los propietarios de los abonos no asisten a todos los juegos, y esto
+puede hacer que un equipo pierda ingresos. Cada vez que un aficionado con abono
+decide quedarse en casa en vez de asistir a un juego, la franquicia deportiva pierde un
+promedio de $20 en venta de comidas y mercancía. Para asegurar que los asientos del
+estadio siempre estén ocupados, los Gigantes crearon un mercado secundario de boletos en línea, donde los propietarios de abonos pueden vender por Internet los boletos que no van a usar. Los especialistas en tecnología de la información de los Gigantes descubrieron una forma de activar y desactivar los códigos de barras en los boletos a
+fin de poder revenderlos. El sistema también permite a los Gigantes ofrecer un servicio adicional a los clientes.
+
+El diagrama de apertura del capítulo señala los puntos importantes generados por
+este caso y este capítulo. Para incrementar los ingresos del estadio, los Gigantes de
+San Francisco desarrollaron un sistema de ajuste dinámico de precios de los boletos
+para ajustarlos a la demanda de los clientes y vender los asientos al precio óptimo. El
+equipo desarrolló otro sistema de venta de boletos que permite a los propietarios de
+boletos venderlos fácilmente en línea a alguien más. Una forma adicional de cautivar
+a los clientes es implementar tecnología de información moderna en el AT&T Park,
+incluyendo una red inalámbrica Wi-Fi masiva con servicios interactivos. Para mejorar
+el rendimiento de los jugadores, los Gigantes implementaron un sistema que captura
+video sobre los jugadores y luego usa los datos para analizar sus estadísticas defensivas,
+incluyendo la velocidad y los tiempos de reacción.
+
+He aquí una pregunta a considerar: ¿qué rol desempeña la tecnología en el éxito de
+los Gigantes de San Francisco como equipo de béisbol? Evalúe las contribuciones de los
+sistemas descritos en este caso de estudio.
+
+{$capitulo1_imagen3.png}
+
+}
+
+
+Pragunta 1:
+¿CÓMO TRANSFORMAN LOS SISTEMAS DE INFORMACIÓN A LOS NEGOCIOS Y POR QUÉ SON TAN ESENCIALES PARA OPERAR Y ADMINISTRAR UN NEGOCIO EN LA ACTUALIDAD?
+
+Los negocios ya no son los mismos en la economía global.
+La inversión de negocios privados en tecnología de la información consistente en hardware, software y
+equipo de comunicaciones, aumentó de 14% a 33% de todo el capital invertido.
+
+CÓMO TRANSFORMAN LOS SISTEMAS DE INFORMACIÓN A LOS NEGOCIOS
+
+Los cambios en la tecnología, junto con los nuevos modelos de negocios innovadores, transformaron la vida social 
+y las prácticas de negocios. 
+
+{$capitulo1_imagen4.png}
+
+ Los negocios usan la tecnología de la información para detectar y responder con rapidez a la demanda cambiante de los clientes, reducir inventarios a los niveles más bajo posibles y lograr niveles más altos de eficiencia operacional. Las cadenas de suministro se han vuelto más aceleradas, con empresas de todos tamaños que dependen del inventario justo a
+tiempo para reducir sus costos indirectos y llegar más rápido al mercado.
+
+ Los negocios están empezando a usar las herramientas de redes sociales para conectar a sus
+empleados, clientes y gerentes en todo el mundo.
+
+
+NOVEDADES EN LOS SISTEMAS DE INFORMACIÓN GERENCIAL
+
+ Lo que hace de los sistemas de información gerencial el tema más emocionante en los negocios es el cambio continuo en la tecnología, su uso administrativo, los modelos de negocios y el impacto en el éxito de las empresas. 
+
+La tabla 1-1 sintetiza los principales temas nuevos en cuanto al uso comercial de los sistemas de información. 
+{$capitulo1_imagen5.png}
+
+En el área de tecnología hay tres cambios interrelacionados:
+ 
+(1) la adopción generalizada de la plataforma computacional móvil;
+Cada vez más aspectos de la computación de negocios están pasando de las computadoras PC o máquinas de escritorio a estos dispositivos móviles.
+
+(2) el crecimiento en cuanto al uso comercial de los “big data”;
+A medida que el comportamiento gerencial cambia, también lo hace la forma en que se organiza, coordina y mide
+el trabajo. Al conectar a los empleados que trabajan en equipos y proyectos, en la red
+social es donde se lleva a cabo el trabajo, se ejecutan los planes y los gerentes hacen
+su labor administrativa. Los empleados se reúnen en los espacios de colaboración, aun
+cuando estén separados por continentes y zonas horarias.
+
+(3) el crecimiento de la “computación en la nube”, donde se ejecuta cada vez más software de negocios a través de Internet;
+La solidez de la computación en la nube y el crecimiento de la plataforma digital
+móvil permiten a las organizaciones confiar más en el teletrabajo, el trabajo remoto
+y la toma de decisiones distribuida.
+
+
+SESIÓN INTERACTIVA: ADMINISTRACIÓN
+{{
+
+CONOZCA A LOS NUEVOS TRABAJADORES MÓVILES
+
+McClendon’s Select;
+{
+ Una granja orgánica familiar ubicada en Peoria, depende del iPad en cada etapa de
+su operación: sembrar campos, cosechar cultivos, surtir pedidos, cargar camiones, entregar a los restaurantes
+y vender productos en los mercados de campesinos.
+
+El copropietario Sean McClendon usa una cámara inalámbrica en su tractor para asegurar que las hileras de
+cultivo estén lo más rectas posible. La app mydlinkLite en su iPad le permite ver las imágenes mientras conduce el arado. 
+
+ Con la conexión de su iPad a la red celular 3G puede acceder al sistema de
+administración COG Pro basado en Web para actualizarsus registros de tipos de semillas, además de dónde y cuándo deben sembrarse.
+
+Antes de que McClendon’s se volviera digital, los pedidos se escribían a mano en un pizarrón blanco, un proceso
+que consumía demasiado tiempo, era propenso a errores y costoso. Ahora cada empleado toma un iPad al llegar a
+trabajar en la mañana y usa una app propietaria llamada Picker Entry para generar una lista de productos a recolectar en el campo a partir de los pedidos en línea colocados por los restaurantes y consumidores. 
+}
+
+
+PepsiCo;
+{
+El uso de dispositivos portátiles para que el negocio opere no se limita a compañías pequeñas. PepsiCo
+fabrica y vende marcas como Pepsi, Gatorade, Mountain Dew, Tropicana, Quaker y Frito-Lay en todo el mundo, ytiene cerca de 280,000 empleados. 
+
+En el pasado, los conductores y vendedores de PepsiCo comenzaban cada día recogiendo los itinerarios
+impresos con las cantidades de los pedidos y las tareas a realizar en cada punto de venta, desde descargar cajas
+de sodas hasta instalar nuevos estantes de exhibición de productos. 
+
+PepsiCo North America Beverages creó una app interna personalizada para el iPhone  que notifica de inmediato a los vendedores
+cuando un conductor llega a una tienda. El iPhone del vendedor tiene una tarjeta de tiempo electrónica y puede ver su 
+itinerario, los detalles de la tienda, los perfiles de la cuenta y todo lo que necesita saber para dar servicio a la tienda.
+
+Los gerentes de PepsiCo usan dispositivos iPad con aplicaciones personalizadas para monitorear el rendimiento de sus equipos, obtener precios, planogramas y contratos, y ayudar a coordinar las entregas con los vendedores.
+
+Anteriormente los gerentes tenían que pasar mucho tiempo en el teléfono, revisando su correo electrónico
+en la oficina y verificando la papelería. Con el iPad, el gerente comienza y termina su día con su equipo.
+}
+
+
+PREGUNTAS DEL CASO DE ESTUDIO
+{
+1. ¿Qué tipos de aplicaciones se describen aquí? ¿Qué funciones de negocios soportan? ¿Cómo mejoran la eficiencia operacional y la toma de decisiones?
+
+RESPUESTA 1:
+ Se mencionan aplicaciones informaticas que soportan funciones tanto administrativas como funciones operativas, mejorando la calidad de la organizacion, documentacion, y la toma de decisiones. La mejora mas notable es la de los tiempos de demora naturales que tiene la realizacion de una tarea (notacion en inventario, revision y toma de pedidos de clientes, informes de todo tipo), estos tiempos se ven reducidos por la ventaja que proporcionan las aplicaciones, aumentando la productividad y eficiencia de los servicios que ofrece la empresa que los utiliza. Al obtener una lista detallada de los requerimientos de los clientes y de las tares de los trabajadores, se tiene informacion util para la toma de decisiones.   
+
+2. Identifique los problemas que las empresas en este caso de estudio resolvieron mediante el uso de dispositivos digitales móviles.
+
+RESPUESTA 2:
+ En el caso de la granja familiar cada uno de los pedidos se escribia a mano, los trabajadores no pierden tiempo para realizar un informe del pedido, solo se enfocan en cargar los camiones para realizar las entregas.
+En el caso de Pepsico los gerentes se ven beneficiados ya que la tarea de supervision es muy demandante, las aplicaciones aliviaron la carga horaria que estos debian cumplir para realizar correctamente su trabajo lo que aumenta su eficiencia.  
+
+3. ¿Qué tipos de empresas tienen más probabilidades de beneficiarse al equipar a sus empleados con dispositivos digitales móviles como iPhone y iPad?
+
+RESPUESTA 3:
+ Todas las empresas pueden ser beneficiadas, desde las pequeñas hasta las grandes. La incorporacion de nuevas tecnologias resulta muy importante para el futuro de las empresas que pretendan mantener a sus clientes conformes con su servicio. 
+
+
+4. Una empresa que implementa dispositivos iPhone dijo:
+“El iPhone no cambia el juego, sino a la industria.
+Cambia la forma en que uno puede interactuar con
+sus clientes” y “con sus proveedores”.
+ Comente las implicaciones de esta aseveración.
+
+
+RESPUESTA 4:
+ Al modificarse la conducta de los consumidores que se vio ampliamente influenciado por el uso de las nuevas tecnologias,  la organizacion de las empresas debe adaptarse a esta tendencia. 
+}
+}}
+
+
+DESAFÍOS Y OPORTUNIDADES DE LA GLOBALIZACIÓN:
+UN MUNDO PLANO
+{
+ El empleo en los sistemas de información y los demás trabajos de servicios va en aumento y los salarios son estables. La subcontratación (outsourcing) ha acelerado el desarrollo de nuevos sistemas en Estados Unidos y en todo el mundo.
+
+El desafío para usted como estudiante de negocios es desarrollar habilidades de altonivel a través de la educación y la experiencia en el trabajo que no se puede subcontratar. El reto para su negocio es evitar los mercados de bienes y servicios que se puedenproducir en el extranjero con un costo mucho menor. Las oportunidades son igual deinmensas.
+ A lo largo de este libro encontrará ejemplos de empresas e individuos quefracasaron o tuvieron éxito con el uso de los sistemas de información para adaptarse aeste nuevo entorno global.
+
+¿Qué tiene que ver la globalización con los sistemas de información gerencial?
+ La respuesta es sencilla: todo. El surgimiento de Internet para convertirse en un sistema de comunicaciones mundial ha reducido de manera drástica los costos de operar y realizar transacciones a una escala global.
+
+ Los sistemas de información permiten la globalización.
+}
+
+
+LA EMPRESA DIGITAL EMERGENTE
+{
+ En una empresa digital, casi todas las relaciones de negocios significativas de la organización con los clientes, proveedores y empleados están habilitadas y mediadas en forma digital. Los procesos de negocios básicos se realizan por medio de redes digitales que abarcan a toda la empresa, o
+que enlazan a varias organizaciones.
+
+PROCESOS DE NEGOCIOS!!!!!!!
+
+Los procesos de negocios se refieren al conjunto de tareas y comportamientos relacionados en forma lógica, que las organizaciones desarrollan con el tiempo para producir resultados de negocios específicos, y la forma única en que se organizan y coordinan estas actividades. Desarrollar un nuevo producto, generar y completar un pedido, crear un plan de marketing y contratar a un empleado, son ejemplos de procesos de negocios, y las formas en que las organizaciones realizan estos procedimientos pueden ser una fuente de solidez competitiva.
+
+Los activos corporativos clave —propiedad intelectual, competencias básicas, activosfinancieros y humanos— se administran por medios digitales.
+}
+
+OBJETIVOS DE NEGOCIOS ESTRATÉGICOSDE LOS SISTEMAS DE INFORMACIÓN
+
+¿Por qué son tan esenciales los sistemas de información en la actualidad? 
+ Los sistemas de información son esenciales para realizar las actividades comerciales diarias en Estados Unidos y en la mayoría de los demás
+países avanzados, así como para lograr los objetivos de negocios estratégicos.
+ Sectores completos de la economía serían casi inconcebibles sin las inversiones sustanciales en los sistemas de información. Las empresas de e-commerce como Amazon, eBay, Google e E*Trade simplemente no existirían. Las industrias de servicios de la
+actualidad —finanzas, seguros y bienes raíces, al igual que los servicios personales
+como viajes, medicina y educación— no podrían operar sin los sistemas de información. 
+
+Hay una interdependencia cada vez mayor entre la habilidad de una empresa para usar la tecnología de la información y su destreza para implementar estrategias corporativas y lograr los objetivos corporativos  Lo que una empresa quiera hacer en cinco años depende a menudo de lo que sus sistemas sean capaces de realizar. 
+
+Específicamente, las empresas de negocios invierten mucho en sistemas de información para lograr seis objetivos de negocios estratégicos:
+{{
+ excelencia operacional;
+ nuevos productos, servicios y modelos de negocios;
+ intimidad con el cliente y con el proveedor;
+ toma de decisiones mejorada;
+ ventaja competitiva, y sobrevivencia.
+
+Excelencia operacional
+{
+ Los sistemas y tecnologías de información son algunas de las herramientas más importantes disponibles para que los
+gerentes obtengan mayores niveles de eficiencia y productividad en las operaciones de negocios.
+
+{$capitulo1_imagen6.png}
+}
+
+Nuevos productos, servicios y modelos de negocios
+{
+Los sistemas de información y las tecnologías son una importante herramienta de habilitación para que las empresas creen nuevos productos y servicios, así como modelos de negocios totalmente nuevos. 
+
+MODELO DE NEGOCIOS!!!!
+Un modelo de negocios describe la forma en que una empresa produce, entrega y vende un producto o servicio para crear riqueza.
+}
+
+Intimidad con clientes y proveedores
+{
+ Cuando una empresa conoce realmente a sus clientes y les da un buen servicio, por lo general ellos responden volviendo y comprando más. 
+Lo mismo ocurre con los proveedores: cuanto más se involucre un negocio con ellos,mejor será la forma en que ofrezcan aportaciones vitales. Esto reduce los costos.
+ El hecho de cómo conocer a los clientes o proveedores es un problema medular para las
+empresas que tienen millones de clientes tanto convencionales como en línea.
+}
+
+Toma de decisiones mejorada
+{
+ Muchos gerentes de negocios trabajan en un banco de niebla de información, sin nunca contar realmente con los datos correctos en el momento oportuno para tomar una decisión informada. 
+ En la década anterior los sistemas y tecnologías de información hicieron posible que a la hora de tomar decisiones los gerentes usaran datos en tiempo real provenientes del mercado.
+ Con esta información los gerentes pueden asignar de inmediato recursos de reparación a las áreas afectadas, informar a los consumidores
+sobre los esfuerzos de reparación y restaurar el servicio con rapidez.
+}
+
+Ventaja competitiva
+{
+ Hacer las cosas mejor que sus competidores, cobrar menos por productos superiores y responder tanto a los clientes como a los proveedores en tiempo real, son puntos positivos que producen mayores ventas y perfiles más altos que sus competidores no podrán igualar.
+}
+
+Sobrevivencia
+{
+ Las empresas de negocios también invierten en sistemas de información y tecnologías debido a que son indispensables para realizar las actividades comerciales.
+ Muchas otras piezas de legislación federal y estatal en el cuidado de la salud, los servicios financieros, la educación y la protección
+privada, imponen requisitos considerables de retención de datos y los informes sobre las empresas estadounidenses. Éstas recurren a los sistemas y tecnologías de información para obtener la capacidad de responder a estos desafíos.
+}
+}}
+}}}}}}
+
+
+
+capitulo1.2:
+
+¿QUÉ ES UN SISTEMA DE INFORMACIÓN? ¿CÓMO FUNCIONA? ¿CUÁLES SON SUS COMPONENTES DE ADMINISTRACIÓN, ORGANIZACIÓN Y TECNOLOGÍA, Y POR QUÉ LOS
+ACTIVOS COMPLEMENTARIOS SON ESENCIALES PARA ASEGURAR QUE LOS SISTEMAS DE INFORMACIÓN PROPORCIONEN UN VALOR GENUINO PARA LAS ORGANIZACIONES?
+
+TECNOLOGIA DE LA INFORMACION!!!!!
+
+ La tecnología de la información (TI) consiste en todo el hardware y software que una empresa necesita usar para poder cumplir con sus objetivos de negocios. Esto incluye no sólo a los equipos de cómputo, los dispositivos de almacenamiento y los dispositivos móviles de bolsillo, sino también a los componentes de software, como los sistemas operativos Windows o Linux, la suite de productividad de escritorio Microsoft Office y los muchos miles de programas de computadora que se encuentran en la típica empresa de gran tamaño. Los “sistemas de información” son más complejos y la mejor manera de comprenderlos es analizarlos desde una perspectiva de tecnología y de negocios.
+
+¿QUÉ ES UN SISTEMA DE INFORMACIÓN?
+{{{{{
+ Podemos plantear la definición técnica de un sistema de información como un conjunto de componentes interrelacionados que recolectan (o recuperan), procesan, almacenan y distribuyen información para apoyar los procesos de toma de decisiones y de control en una organización. 
+ Los sistemas de información contienen información sobre personas, lugares y cosas importantes dentro de la organización, o en el entorno que la rodea. Por información nos referimos a los datos que se han modelado en una forma significativa y útil para los seres humanos.
+ Por el contrario, los DATOS son flujos de elementos en bruto que representan los eventos que ocurren en las organizaciones o en el entorno físico antes
+de ordenarlos e interpretarlos de forma que las personas los puedan comprender y usar.
+
+{$capitulo1_imagen7.png}
+
+Hay tres actividades en un sistema de información que producen los datos necesarios para que las organizaciones tomen decisiones, controlen las operaciones, analicen problemas y creen nuevos productos o servicios. Estas actividades son: entrada, procesamiento y salida:
+
+{
+{$capitulo1_imagen8.png}
+
+LA ENTRADA
+ La entrada captura o recolecta los datos en bruto desde dentro de la organización o a través de su entorno externo. 
+
+El procesamiento
+ Convierte esta entrada en bruto en un formato significativo. 
+
+LA SALIDA
+  La salida transfiere la información procesada a las personas que harán uso de ella, o a las actividades para las que se utilizará.
+
+ Los sistemas de información también requieren RETROALIMENTACION, la cual es la salida que se devuelve a los miembros adecuados de la organización para ayudarles a evaluar o corregir la etapa de entrada.
+}
+
+{
+ Hay una clara distinción entre una computadora y un programa de computadora por una parte, y un sistema de información por la otra.
+ 
+ Las computadoras electrónicas y los programas de software relacionados son la base técnica, las herramientas y los materiales de los modernos sistemas de información.
+
+ Las computadoras proporcionan el equipo para almacenar y procesar información. 
+
+ Los programas de computadora, o software, son conjuntos de instrucciones de operación que dirigen y controlan el procesamiento nde las computadoras. 
+
+ Las computadoras son solo parte de un sistema de información.
+
+ Las computadoras y los programas son los martillos, clavos y madera de los sistemas de información basados en computadora, pero por sí solos
+no pueden producir la información que necesita una organización en particular. 
+}
+}}}}}
+
+DIMENSIONES DE LOS SISTEMAS DE INFORMACIÓN
+
+ Nos referimos a esta comprensión más extensa de los sistemas de información, la cual abarca un entendimiento de los niveles gerenciales
+y organizacionales de los sistemas, así como de sus dimensiones técnicas, como el alfabetismo en los sistemas de información. 
+
+ En cambio, el alfabetismo computacional se enfoca principalmente en el conocimiento de la tecnología de la información.
+
+ El campo de los sistemas de información gerencial (MIS) trata de obtener este alfabetismo más amplio en los sistemas de información. Los sistemas MIS tratan con los aspectos del comportamiento al igual que con los aspectos técnicos que rodean el desarrollo, uso e impacto de los sistemas de información que utilizan los gerentes y empleados en la empresa.
+
+{$capitulo1_imagen9.png}
+
+
+Organizaciones
+{
+ Los sistemas de información son parte integral de las organizaciones. 
+ Los elementos clave de una organización son su gente, su estructura, sus procesos de negocios, sus políticas y su cultura.
+
+ Las organizaciones tienen una estructura compuesta por distintos niveles y especialidades. Sus estructuras revelan una clara división de labores. La autoridad y responsabilidad en una empresa de negocios se organizan como una jerarquía o estructura de pirámide.
+ Los niveles superiores de esta jerarquía son los empleados gerenciales, profesionales y técnicos, en tanto que en los niveles base de la pirámide está el personal de operaciones.
+
+ La gerencia de nivel superior toma decisiones estratégicas de largo alcance en cuanto a productos y servicios, además de asegurar el desempeño financiero dela empresa. 
+ La gerencia de nivel medio lleva a cabo los programas y planes de la gerencia de nivel superior y la gerencia operacional es responsable de supervisar las actividades diarias de la empresa.
+
+Los trabajadores del conocimiento, ingenieros, científicos o arquitectos, diseñan productos o servicios y crean nuevo conocimiento para la empresa.
+
+ los trabajadores de datos (secretarias o asistentes administrativos) ayudan con la calendarización y las comunicaciones en todos los niveles de la empresa.
+
+ Los trabajadores de producción o de servicio son los que realmente elaboran el producto y ofrecen el servicio.
+
+ Las principales funciones de negocios, o tareas especializadas que realizan las organizaciones comerciales, consisten en ventas y marketing, manufactura y producción, finanzas y contabilidad, y recursos humanos 
+
+{$capitulo1_imagen11.png}
+
+Una organización coordina el trabajo mediante su jerarquía y sus procesos de negocios, los cuales son tareas y comportamientos relacionados en forma lógica para realizar el trabajo. Desarrollar un nuevo producto, cumplir con un pedido y contratar un empleado son ejemplos de procesos de negocios.
+
+{$capitulo1_imagen10.png}
+
+ Los procesos de negocios de la mayoría de las organizaciones incluyen reglas formales para realizar tareas que se han desarrollado a través de un largo periodo. Estas reglas guían a los empleados en una variedad de procedimientos, desde elaborar una factura hasta responder a las quejas de los clientes.
+
+ Los sistemas de información automatizan muchos procesos de negocios; por ejemplo, cómo recibe crédito un cliente o cómo se le factura,
+lo cual se suele determinar por medio de un sistema de información que incorpora un conjunto de procesos formales de negocios.
+}
+
+
+Administración
+{
+ El trabajo de la gerencia es dar sentido a las distintas situaciones a las que se enfrentan las organizaciones, tomar decisiones y formular planes de acción para resolver los problemas organizacionales. 
+ La tecnología de la información puede desempeñar un rol poderoso para ayudar a los gerentes a diseñar y ofrecer
+nuevos productos y servicios, así como para redirigir y rediseñar sus organizaciones. 
+}
+
+
+Tecnología de la información
+{
+La tecnología de la información es una de las diversas herramientas que utilizan los gerentes para enfrentar el cambio.
+
+ El HARDWARE de computadora es el equipo físico que se utiliza para las actividades de entrada, procesamiento y salida en un sistema de información y consiste en lo siguiente: 
+ Computadoras de diversos tamaños y formas (incluyendo los dispositivos móviles de bolsillo); varios dispositivos de entrada, salida y almacenamiento, y dispositivos de telecomunicaciones que conectan a las computadoras entre sí.
+
+El SOFTWARE de computadora consiste en las instrucciones detalladas y preprogramadas que controlan y coordinan los componentes de hardware de computadora en un sistema de información.
+
+La tecnología de administración de datos consiste en el software que gobierna la
+organización de los datos en medios de almacenamiento físico. 
+
+La tecnología de redes y telecomunicaciones, que consiste tanto en los dispositivos físicos como en el software, conecta las diversas piezas de hardware y transfiere datos de una ubicación física a otra.
+
+ Una RED enlaza a dos o más computadoras para compartir datos o recursos, por ejemplo una impresora.
+La red más grande y utilizada del mundo es Internet, una “red de redes” global que utiliza estándares universales para conectar
+millones de redes distintas con cerca de 3 mil millones de usuarios en más de 230 países de todo el mundo
+}
+
+ Las redes corporativas internas basadas en tecnología de Internet se denominan intranets. Las intranet privadas que se extienden a los usuarios autorizados fuera de la organización se denominan extranets y las empresas usan dichas redes para coordinar sus actividades con otras empresas,
+como realizar compras, colaborar en el diseño y otros tipos de trabajo interno de la organización.
+
+
+
+llegue hasta pagina 60 pdf.

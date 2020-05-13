@@ -1,0 +1,19 @@
+"use strict";
+document.addEventListener('DOMContentLoaded', iniciar);
+function iniciar() {
+    if ((document.getElementById('form')) != null) {
+        let form = document.getElementById('form');
+        let valor = form.getElementsByTagName('input');
+        form.addEventListener('submit', enviar(form, valor));
+    }
+}
+
+function enviar(e, f) {
+    for (let i = 0; i < (f.length - 1); i++) {
+
+        
+       
+    }
+}
+
+
